@@ -44,14 +44,13 @@ def save_string_to_file(text, directory, filename):
     return None
 
 
-# Definirajte funkcijo, ki prenese glavno stran in jo shrani v datoteko.
-
-
 def save_frontpage(page, directory, filename):
     """Funkcija shrani vsebino spletne strani na naslovu "page" v datoteko
     "directory"/"filename"."""
-    raise NotImplementedError()
-
+    content = download_url_to_string(page)
+    if content is not None:
+        save_string_to_file(content, directory, filename)
+    return None
 
 ###############################################################################
 # Po pridobitvi podatkov jih želimo obdelati.
