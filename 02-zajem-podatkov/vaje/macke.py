@@ -20,15 +20,16 @@ def download_url_to_string(url):
     """Funkcija kot argument sprejme niz in puskuša vrniti vsebino te spletne
     strani kot niz. V primeru, da med izvajanje pride do napake vrne None.
     """
+    page_content = None
     try:
-        # del kode, ki morda sproži napako
-        page_content = 'TODO'
-    except 'TODO':
-        # koda, ki se izvede pri napaki
-        # dovolj je če izpišemo opozorilo in prekinemo izvajanje funkcije
-        raise NotImplementedError()
-    # nadaljujemo s kodo če ni prišlo do napake
-    raise NotImplementedError()
+        response = requests.get(url)
+        response.raise_for_status()
+        page_content = response.text
+    except requests.HTTPError as http_err:
+        print(f'HTTP error occurred: {http_err}')
+    except Exception as err:
+        print(f'Other error occurred: {err}')
+    return page_content
 
 
 def save_string_to_file(text, directory, filename):
