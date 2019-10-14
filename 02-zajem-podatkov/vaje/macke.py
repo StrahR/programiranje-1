@@ -71,7 +71,7 @@ def read_file_to_string(directory, filename):
 
 
 def page_to_ads(page_content):
-    """Funkcija poišče posamezne ogllase, ki se nahajajo v spletni strani in
+    """Funkcija poišče posamezne oglase, ki se nahajajo v spletni strani in
     vrne njih seznam"""
     raise NotImplementedError()
 
