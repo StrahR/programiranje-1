@@ -59,8 +59,10 @@ def save_frontpage(page, directory, filename):
 
 def read_file_to_string(directory, filename):
     """Funkcija vrne celotno vsebino datoteke "directory"/"filename" kot niz"""
-    raise NotImplementedError()
-
+    path = os.path.join(directory, filename)
+    with open(path, 'r', encoding='utf-8') as file_in:
+        text = file_in.read()
+    return text
 
 # Definirajte funkcijo, ki sprejme niz, ki predstavlja vsebino spletne strani,
 # in ga razdeli na dele, kjer vsak del predstavlja en oglas. To storite s
