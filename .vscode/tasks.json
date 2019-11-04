@@ -10,7 +10,7 @@
             },
             "windows": {
                 "command": "python -i \\\"${file}\\\""
-                },
+            },
             "linux": {
                 "command": "python -i \"${file}\""
             },
@@ -26,14 +26,15 @@
                 "isDefault": true
             },
             "windows": {
-                "command": "ocaml -init \\\"${file}\\\""
-                },
+                "command": "utop -init \\\"${file}\\\""
+            },
             "linux": {
-                "command": "ocaml -init \"${file}\""
+                "command": "utop -init \"${file}\""
             },
             "osx": {
-                "command": "ocaml -init \"${file}\""
-            }
+                "command": "utop -init \"${file}\""
+            },
+            "problemMatcher": []
         }
     ]
 }
