@@ -16,7 +16,8 @@
             },
             "osx": {
                 "command": "python -i \"${file}\""
-            }
+            },
+            "problemMatcher": []
         },
         {
             "label": "OCaml",
